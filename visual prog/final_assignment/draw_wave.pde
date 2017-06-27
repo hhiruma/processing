@@ -1,0 +1,3 @@
+class draw_wave{
+
+}
