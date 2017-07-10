@@ -23,12 +23,12 @@ void setInitVals(){
 	noStroke();
 }
 
-void reversePixels(){
+void reversePixels(Capture v){
 	color tmp;
-	for(int y = 0; y < video.height; y+= d){
-		for(int x = 0; x < video.width; x+=d){
-			tmp = video.pixels[y*video.width + x];
-			video.pixels[y*video.width+x] = video.pixels[y*video.width+ (video.width - 1 - x )];
+	for(int y = 0; y < v.height; y+= d){
+		for(int x = 0; x < v.width; x+=d){
+			tmp = v.pixels[y*v.width + x];
+			v.pixels[y*v.width+x] = v.pixels[y*v.width+ (v.width - 1 - x )];
 		}
 	}
 }
@@ -53,7 +53,7 @@ void drawAxis() {
 	}
 
 	stroke(0, 0, 255);
-fill(0, 0, 255);
+	fill(0, 0, 255);
 	line(0, -yAx, 0, 0, yAx, 0);
 	for (int i = (int)-yAx; i <= yAx; i += 50) {
 		text(i, 5, i, 0);
@@ -73,6 +73,12 @@ fill(0, 0, 255);
 	noFill();
 }
 
+void resetCam(){
+	radH = 0;
+	radV = 0; 
+	radS = 0;
+}
+
 void keyCommand() {
 	if (keyPressed) {
 		switch(key) {
@@ -86,6 +92,13 @@ void keyCommand() {
 			case 'c': cam -= 5;   break;
 			case 'd': cam += 5;   break;
 			case 'p': noLoop();   break;
+			case 'r': resetCam(); break;
 		}
+	}
+}
+
+void keyTyped(){
+	switch(key){
+		case 'o': loop();
 	}
 }

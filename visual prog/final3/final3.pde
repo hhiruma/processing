@@ -11,7 +11,6 @@ float xAx, yAx, zAx;
 float radH, radV, radS;
 float cam;
 
-
 void setup(){
 	size(600, 600, P3D);
 
@@ -27,9 +26,9 @@ void draw(){
 	keyCommand();
 	setCamera();
 	drawAxis();
-	
+
 	//___set pixels___
-	reversePixels();
+	reversePixels(video);
 	for(int y = 0; y < video.height; y+=d){
 		for(int x = 0; x < video.width; x+=d){
 			tmpC[y/d][x/d] = video.pixels[y*video.width + x];
