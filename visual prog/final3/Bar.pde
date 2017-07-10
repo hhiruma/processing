@@ -21,6 +21,7 @@ class Bar{
 
 	void update(color _c){
 		len = 300 -sqrt(sq(red(base)-red(_c))*7+sq(green(base)-green(_c))*17+sq(blue(base)-blue(_c))*64);
+		if(len < 0 ) len = 20;
 		c = _c;
 	}
 }

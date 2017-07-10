@@ -7,6 +7,11 @@ color base;
 color[][] tmpC;
 Hist h;
 
+float xAx, yAx, zAx;
+float radH, radV, radS;
+float cam;
+
+
 void setup(){
 	size(600, 600, P3D);
 

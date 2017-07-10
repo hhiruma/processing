@@ -1,7 +1,3 @@
-float xAx, yAx, zAx;
-float radH, radV, radS;
-float cam;
-
 void setInitVals(){
 	//___env settings___
 	xAx = 600; 
