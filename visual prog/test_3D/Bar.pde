@@ -1,19 +1,17 @@
 class Bar{
-	int x, y, z;
+	PVector pos;
 	float len;
 	color c;
 
-	Bar(int _x, int _y, int _z, float _len, color _c){
-		x = _x;
-		y = _y;
-		z = _z;
+	Bar(PVector _pos , float _len, color _c){
+		pos = _pos;
 		len = _len;
 		c = _c;
 	}
 
 	void disp(){
 		pushMatrix();
-			translate(x, y, z + len / 2);
+			translate(pos.x, pos.y, pos.y + len/2);
 			fill(c);
 			box(10, 10, len);
 		popMatrix();

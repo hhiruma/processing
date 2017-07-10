@@ -18,7 +18,7 @@ void setInitVals(){
 	cam = zAx;
 
 	//__for b___
-	b = new Ball(initPos, initSpd, 30);
+	b = new Ball(initPos, initSpd, 10);
 }
 
 void setCamera() {

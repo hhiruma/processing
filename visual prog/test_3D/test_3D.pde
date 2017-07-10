@@ -26,7 +26,7 @@ void draw(){
 	for(int i = 0; i<32; i++){
 		for(int j = 0; j<24; j++){
 			new_c[j][i] = color(128);
-			//new_c[j][i] = color(count++%255);
+			new_c[j][i] = color(count++%255);
 		}
 	}
 
